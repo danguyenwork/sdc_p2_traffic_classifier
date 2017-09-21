@@ -212,7 +212,12 @@ def final_model_evaluate(batch_size_val):
 			print(sess.run(tf.nn.top_k(tf.constant(predicted_logits[i]), k=5)))
 			print('Overall prob:')
 			# np.set_printoptions(precision=2, suppress=True)
-			print(np.exp(predicted_logits[i]) / np.exp(predicted_logits[i]).sum()*100.)
+
+			softmax = np.exp(predicted_logits[i]) / np.exp(predicted_logits[i]).sum()
+
+			softmax.sort()
+
+			print(softmax[-5:])
 # ========
 
 IMG_HEIGHT = 32

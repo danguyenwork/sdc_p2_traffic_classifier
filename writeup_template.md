@@ -174,12 +174,10 @@ It is important to note that the Pedestrian image is a big curve ball because it
 
 | Image			        |     Top 5 softmax	      					|
 |:---------------------:|:---------------------------------------------:|
-| Speed Limit 30      		| 42.84,  13.81,  12.22,  10.46,   9.99  									|
-| Right of Way     			|47.46,  28.88,  15.77,   9.19,   1.13 										|
-| Slippery Road					| 41.25,  16.01,  13.62,  10.93,   4.3											|
-| Road Work	      		| 67.45,  20.19,  15.59,   9.87,  -7.52				 				|
-| Pedestrian			| 27.7 ,  19.39,  18.3 ,  11.45,   9.87      							|
+| Speed Limit 30      		| .99 0 0 0 0 0  									|
+| Right of Way     			|.99 0 0 0 0 0 										|
+| Slippery Road					|.99 0 0 0 0 0											|
+| Road Work	      		| .99 0 0 0 0 0				 				|
+| Pedestrian			| .99 0 0 0 0 0      							|
 
-For the first four images, the algorithm is fairly certain as we see a big gap between the top and second values.
-
-For the pedestrian image, the algorithm predicts correctly in this particular run but the runner up (26 - traffic signal) is a close one.
+It's interesting that the algorithm shows almost 100% certainly for each image, including the pedestrian misclassification
